@@ -91,9 +91,3 @@ namespace MacXibless
         }
     }
 }
-
-namespace MacXibless.Internal
-{
-    [Register]
-    internal class XpcProtocol_EnsureRegistrar : NSObject, IXpcProtocol { }
-}

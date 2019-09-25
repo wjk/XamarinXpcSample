@@ -7,7 +7,7 @@ using CoreGraphics;
 
 namespace MacXibless
 {
-    [Protocol]
+    [Protocol(Name = "XamarinXpcProtocol")]
     [BaseType(typeof(NSObject))]
     interface XpcProtocol
 	{

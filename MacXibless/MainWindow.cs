@@ -64,14 +64,28 @@ namespace MacXibless
 
         private void ButtonClicked()
         {
+            bool connectionSuccessful = false;
+
             NSXpcConnection connection = new NSXpcConnection("com.your-company.MacXiblessXPCService");
             connection.RemoteInterface = NSXpcInterface.CreateForType(typeof(IXpcProtocol));
-            connection.Resume();
+            connection.InvalidationHandler = () =>
+            {
+                if (!connectionSuccessful)
+                {
+                    ClickMeLabel.StringValue = "Connection failed!";
+                }
+            };
 
+            connection.Resume();
             var remoteObject = connection.CreateRemoteObjectProxy<IXpcProtocol>();
             remoteObject.GetHelloString(new NSString("World"), (retval) =>
             {
-                InvokeOnMainThread(() => ClickMeLabel.StringValue = retval);
+                InvokeOnMainThread(() =>
+                {
+                    ClickMeButton.Title = retval;
+                    connectionSuccessful = true;
+                    connection.Invalidate();
+                });
             });
         }
     }

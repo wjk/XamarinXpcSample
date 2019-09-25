@@ -32,9 +32,9 @@ namespace MacXibless.XPCService
         }
 
         [Export("getHelloString:returnBlock:")]
-        public void GetHelloString(string toWhom, Action<string> returnBlock)
+        public void GetHelloString(NSString toWhom, Action<NSString> returnBlock)
         {
-            returnBlock($"Hello, {toWhom}!");
+            returnBlock(new NSString($"Hello, {toWhom}!"));
         }
     }
 }

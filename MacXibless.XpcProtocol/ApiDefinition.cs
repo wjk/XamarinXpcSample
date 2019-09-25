@@ -12,6 +12,6 @@ namespace MacXibless
     interface XpcProtocol
 	{
         [Export("getHelloString:returnBlock:")]
-		void GetHelloString(string toWhom, Action<string> returnBlock);
+		void GetHelloString(NSString toWhom, [BlockCallback] Action<NSString> returnBlock);
 	}
 }

@@ -69,7 +69,7 @@ namespace MacXibless
             connection.Resume();
 
             var remoteObject = connection.CreateRemoteObjectProxy<IXpcProtocol>();
-            remoteObject.GetHelloString("World", (retval) =>
+            remoteObject.GetHelloString(new NSString("World"), (retval) =>
             {
                 InvokeOnMainThread(() => ClickMeLabel.StringValue = retval);
             });

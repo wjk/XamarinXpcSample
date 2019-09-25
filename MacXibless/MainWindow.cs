@@ -66,8 +66,9 @@ namespace MacXibless
         {
             bool connectionSuccessful = false;
 
+            var protocol = new ObjCRuntime.Protocol("XamarinXpcProtocol");
             NSXpcConnection connection = new NSXpcConnection("com.your-company.MacXiblessXPCService");
-            connection.RemoteInterface = NSXpcInterface.CreateForType(typeof(IXpcProtocol));
+            connection.RemoteInterface = NSXpcInterface.CreateForProtocol(protocol);
             connection.InvalidationHandler = () =>
             {
                 if (!connectionSuccessful)
@@ -89,4 +90,10 @@ namespace MacXibless
             });
         }
     }
+}
+
+namespace MacXibless.Internal
+{
+    [Register]
+    internal class XpcProtocol_EnsureRegistrar : NSObject, IXpcProtocol { }
 }

@@ -31,6 +31,7 @@
     <CreatePackage>false</CreatePackage>
     <AOTMode>None</AOTMode>
     <HttpClientHandler>NSUrlSessionHandler</HttpClientHandler>
+    <MonoBundlingExtraArgs>--registrar=static</MonoBundlingExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -50,6 +51,7 @@
     <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
     <AOTMode>None</AOTMode>
     <HttpClientHandler>NSUrlSessionHandler</HttpClientHandler>
+    <MonoBundlingExtraArgs>--registrar=static</MonoBundlingExtraArgs>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -22,11 +22,4 @@ namespace MacXibless
 			get { return (MainWindow)base.Window; }
 		}
 	}
-
-    [Protocol]
-    internal interface FooProtocol
-    {
-        [Export("doFoo:")]
-        void DoFoo(string toWhom);
-    }
 }

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacXibless", "MacXibless\MacXibless.csproj", "{663EACB6-EACB-4828-AF3D-83D7E0AF6E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacXiblessXPCService", "MacXiblessXPCService\MacXiblessXPCService.csproj", "{5BD0C3A6-C522-4D28-B796-32F4FC51E910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacXibless.XpcProtocol", "MacXibless.XpcProtocol\MacXibless.XpcProtocol.csproj", "{22781A1F-9117-42C3-8657-534B6780F040}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{663EACB6-EACB-4828-AF3D-83D7E0AF6E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663EACB6-EACB-4828-AF3D-83D7E0AF6E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663EACB6-EACB-4828-AF3D-83D7E0AF6E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663EACB6-EACB-4828-AF3D-83D7E0AF6E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD0C3A6-C522-4D28-B796-32F4FC51E910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD0C3A6-C522-4D28-B796-32F4FC51E910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD0C3A6-C522-4D28-B796-32F4FC51E910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD0C3A6-C522-4D28-B796-32F4FC51E910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22781A1F-9117-42C3-8657-534B6780F040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22781A1F-9117-42C3-8657-534B6780F040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22781A1F-9117-42C3-8657-534B6780F040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22781A1F-9117-42C3-8657-534B6780F040}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

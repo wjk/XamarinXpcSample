@@ -66,7 +66,7 @@ namespace MacXibless
         {
             bool connectionSuccessful = false;
 
-            var protocol = new ObjCRuntime.Protocol("XamarinXpcProtocol");
+            var protocol = new ObjCRuntime.Protocol(typeof(IXpcProtocol));
             NSXpcConnection connection = new NSXpcConnection("com.your-company.MacXiblessXPCService");
             connection.RemoteInterface = NSXpcInterface.CreateForProtocol(protocol);
             connection.InvalidationHandler = () =>

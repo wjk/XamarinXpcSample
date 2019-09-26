@@ -25,7 +25,7 @@ namespace MacXibless.XPCService
         [Export("listener:shouldAcceptNewConnection:")]
         public bool ShouldAcceptConnection(NSXpcListener listener, NSXpcConnection newConnection)
         {
-            newConnection.ExportedInterface = NSXpcInterface.CreateForType(typeof(XpcProtocol));
+            newConnection.ExportedInterface = NSXpcInterface.CreateForType(typeof(IXpcProtocol));
             newConnection.ExportedObject = this;
             newConnection.Resume();
             return true;

@@ -9,7 +9,6 @@ namespace MacXibless.XPCService
         static void Main(string[] args)
         {
             AppKit.NSApplication.Init();
-            ObjCRuntime.Runtime.RegisterAssembly(typeof(Program).Assembly);
 
             using (Program program = new Program())
                 program.Run();
@@ -26,13 +25,14 @@ namespace MacXibless.XPCService
         [Export("listener:shouldAcceptNewConnection:")]
         public bool ShouldAcceptConnection(NSXpcListener listener, NSXpcConnection newConnection)
         {
-            newConnection.ExportedInterface = NSXpcInterface.CreateForProtocol(new ObjCRuntime.Protocol("XamarinXpcProtocol"));
+            newConnection.ExportedInterface = NSXpcInterface.CreateForType(typeof(XpcProtocol));
             newConnection.ExportedObject = this;
+            newConnection.Resume();
             return true;
         }
 
         [Export("getHelloString:returnBlock:")]
-        public void GetHelloString(NSString toWhom, Action<NSString> returnBlock)
+        public void GetHelloString(NSString toWhom, GetHelloStringReturnBlock returnBlock)
         {
             returnBlock(new NSString($"Hello, {toWhom}!"));
         }

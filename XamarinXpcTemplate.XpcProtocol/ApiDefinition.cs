@@ -5,16 +5,12 @@ using Foundation;
 using ObjCRuntime;
 using CoreGraphics;
 
-namespace MacXibless
+namespace XamarinXpcTemplate
 {
-    delegate void GetHelloStringReturnBlock(NSString message);
-
     [Preserve, XpcInterface]
-    [Protocol(Name = "XamarinXpcProtocol")]
+    [Protocol(Name = "XamarinXpcTemplateInterfaceProtocol")]
     [BaseType(typeof(NSObject))]
-    interface XpcProtocol
-	{
-        [Export("getHelloString:returnBlock:")]
-		void GetHelloString(NSString toWhom, [BlockCallback] GetHelloStringReturnBlock returnBlock);
-	}
+    interface IXpcInterfaceProtocol
+    {
+    }
 }

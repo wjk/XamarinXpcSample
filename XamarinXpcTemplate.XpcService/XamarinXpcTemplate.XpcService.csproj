@@ -6,8 +6,8 @@
     <ProjectGuid>{5BD0C3A6-C522-4D28-B796-32F4FC51E910}</ProjectGuid>
     <ProjectTypeGuids>{10CE9E57-9141-4DF0-916A-2C4FD4EE2A73};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MacXibless.XPCService</RootNamespace>
-    <AssemblyName>MacXiblessXPCService</AssemblyName>
+    <RootNamespace>XamarinXpcTemplate</RootNamespace>
+    <AssemblyName>XamarinXpcTemplate.XpcService</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
@@ -32,7 +32,6 @@
     <LinkMode></LinkMode>
     <XamMacArch></XamMacArch>
     <AOTMode>None</AOTMode>
-    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
     <MonoBundlingExtraArgs>--registrar=static</MonoBundlingExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -70,9 +69,8 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MacXibless.XpcProtocol\MacXibless.XpcProtocol.csproj">
-      <Project>{22781A1F-9117-42C3-8657-534B6780F040}</Project>
-      <Name>MacXibless.XpcProtocol</Name>
+    <ProjectReference Include="..\XamarinXpcTemplate.XpcProtocol\XamarinXpcTemplate.XpcProtocol.csproj">
+      <Name>XamarinXpcTemplate.XpcProtocol</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.AppExtension.CSharp.targets" />

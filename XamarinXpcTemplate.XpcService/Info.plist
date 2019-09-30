@@ -7,11 +7,11 @@
 	<key>CFBundleDisplayName</key>
 	<string>MacXiblessXPCService</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.MacXiblessXPCService</string>
+	<string>com.your-company.XamarinXpcTemplate</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>MacXiblessXPCService</string>
+	<string>XamarinXpcTemplate</string>
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>

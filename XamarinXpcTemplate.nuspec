@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Sunburst.XamarinXpcTemplate</id>
+    <version>1.0.0</version>
+    <description>
+      A `dotnet new` template for creating a Xamarin.Mac XPC service.
+    </description>
+    <authors>William Kent</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file target="content\.template.config" src=".template.config\**" />
+    <file target="content\XamarinXpcTemplate.XpcProtocol" src="XamarinXpcTemplate.XpcProtocol\**" />
+    <file target="content\XamarinXpcTemplate.XpcService" src="XamarinXpcTemplate.XpcService\**" />
+  </files>
+</package>
